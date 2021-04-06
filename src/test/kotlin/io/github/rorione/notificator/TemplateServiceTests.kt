@@ -1,7 +1,5 @@
 package io.github.rorione.notificator
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import io.github.rorione.notificator.controller.TemplateController
 import io.github.rorione.notificator.dto.RequestDTO
 import io.github.rorione.notificator.dto.TemplateDTO
 import io.github.rorione.notificator.dto.adapter.RequestDTOToInfoAdapter
@@ -10,30 +8,17 @@ import io.github.rorione.notificator.factory.RequestFactory
 import io.github.rorione.notificator.factory.TemplateFactory
 import io.github.rorione.notificator.model.Request
 import io.github.rorione.notificator.model.Template
-import io.github.rorione.notificator.model.TemplateInfo
 import io.github.rorione.notificator.repository.TemplateRepository
 import io.github.rorione.notificator.service.TemplateService
 import io.github.rorione.notificator.utils.RequestSenderUtils
 import org.junit.jupiter.api.*
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.extension.ExtendWith
-import org.mockito.Mockito
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.boot.test.mock.mockito.MockBean
-import org.springframework.http.MediaType
-import org.springframework.test.context.junit.jupiter.SpringExtension
-import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers
-import javax.persistence.EntityNotFoundException
-import org.junit.jupiter.api.BeforeEach
 import org.mockito.ArgumentMatchers.anyString
-import org.mockito.junit.jupiter.MockitoExtension
-import org.stringtemplate.v4.ST
-import org.stringtemplate.v4.misc.STNoSuchAttributeException
-import java.lang.IllegalArgumentException
+import org.mockito.Mockito
+import org.springframework.boot.test.mock.mockito.MockBean
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import javax.persistence.EntityNotFoundException
 
 @ExtendWith(SpringExtension::class)
 @Tag("unitTest")

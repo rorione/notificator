@@ -1,6 +1,5 @@
 package io.github.rorione.notificator.factory
 
-import io.github.rorione.notificator.dto.RequestDTO
 import io.github.rorione.notificator.model.Request
 import io.github.rorione.notificator.model.RequestInfo
 import io.github.rorione.notificator.model.Template
